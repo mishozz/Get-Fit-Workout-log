@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Get Fit</title>
+</head>
+<body>
+    <header class="main-header" >
+            <img src="images/logo.png" alt="Get Fit Logo" class="logo"></img>
+            <nav class="header-nav">
+                <ul id="header-ul" class="header-ul">
+                    <li id="home">
+                        <a href="home_page.html">Home</a>
+                    </li>
+                    <li id="exercises-page"><a href="workout_log.html">Exercises</a></li>
+                    <li class="dropdown-menu">
+                        <div class="dropdown-icons">
+                            <i id="user-icon" class='far fa-user'></i>
+                            <i id="caret" class="fa fa-caret-down"></i>
+                        </div>
+                        <ul class="dropdown-ul">
+                            <li class="login-register-link"><a href="login_form.html">Login</a></li>  
+                            <li class="login-register-link"><a href="register_form.html">Register</a></li>
+                            <li id="logout-link" onclick="logout()"><a href="home_page.html">Logout</a></li>
+                        </ul>
+                    </li>
+            </nav>  
+            <div class="menu-toggle"><i id="menu-btn" class="fa fa-bars"></i></div>        
+    </header>
+    <main>
+        <section class="container"> 
+            <img src="images/background.jpg" alt="deadlift" id="background-img">     
+            <article class="inner-container">
+                <h1>GET FIT</h1>
+                <ul>
+                    <li>Track every workout</li>
+                    <li>Add exercises</li>
+                    <li>Get better results</li>
+                    <li>Try it today!</li>
+                </ul>
+            </article>            
+        </section>
+
+        <aside class="aside">
+            <div class="aside-container aside-app-container">
+                <div class="aside-inner-container aside-app-inner-container">
+                    <img class="app-img" src="images/app.png" alt="Get Fit on phone">
+                    <div>
+                        <p>
+                            Get Fit is the best and easiest way to track your weightlifting workouts
+                        </p>
+                        <img class="download-app" src="images/app-store.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="aside-info-wrap">
+                <div class="aside-container">
+                    <div class="aside-inner-container">
+                        <i class="fa fa-info-circle"></i>
+                        <h2>What is Get Fit workout log?</h2>
+                    </div>    
+                    <p>
+                        We've been able to put together a great combination of simplicity, usability, and features. Other workout apps take a simple thing and over complicate it. We believe that a workout log should do just what it says: log your workout.
+                    </p>  
+                </div>
+                <div class="aside-container">
+                    <div class="aside-inner-container">
+                        <i class="fa fa-heart"></i>
+                        <h2>Why people prefer using it</h2>
+                    </div>
+                    <p>
+                        Get Fit Workout Log is designed to replace your paper workout journal. Being simple doesn't mean you have to compromise! Simple Workout Log has many features others don't have.
+                    </p>
+                </div>
+            </div>
+            
+        </aside>
+    </main>
+
+
+    	  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	 https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+
+    <script src="authentication.js"></script>
+    
+    <script src="animations.js"></script>    
+</body>
+</html>

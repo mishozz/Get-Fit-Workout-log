@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Workout log</title>
+</head>
+<body class="workout-log-body">
+    
+        <header class="main-header workout-log-header" >
+            <img src="images/logo.png" alt="Get Fit Logo" class="logo"></img>
+            <nav class="header-nav">
+                <ul id="header-ul" class="header-ul">
+                    <li id="home">
+                        <a href="home_page.html">Home</a>
+                    </li>
+                    <li id="exercises-page"><a href="workout_log.html">Workout Log</a></li>
+                    <li class="dropdown-menu">
+                        <div class="dropdown-icons">
+                            <i id="user-icon" class='far fa-user'></i>
+                            <i id="caret" class="fa fa-caret-down"></i>
+                        </div>
+                        <ul class="dropdown-ul">
+                            <li class="login-register-link"><a href="login_form.html">Login</a></li>  
+                            <li class="login-register-link"><a href="register_form.html">Register</a></li>
+                            <li id="logout-link" onclick="logout()"><a href="home_page.html">Logout</a></li>
+                        </ul>
+                    </li>
+            </nav>  
+            <div class="menu-toggle"><i id="menu-btn" class="fa fa-bars"></i></div>        
+        </header>
+        <div class="workout-log-wrapper">
+            <section class="workout-log-section">
+                <header class="log-header">                
+                        <button type = "button" id="exercise-btn" class="workout-log-btn active-btn">New workout</button>                  
+                        <button type = "button" id="history-btn" class="workout-log-btn">History</h2>                
+                </header>
+                <ul class="workout-log-exercises">
+                  
+                </ul>
+                <ul class="workout-log-history">
+                    
+
+                </ul>
+                <footer class="workout-log-footer">
+                    <form action="" id="Workout-log-form" class="workout-log-form">
+                        <input class="form-input exercise-input" id="exericise-name" type="text" placeholder="Name">
+                        <input class="form-input exercise-input" id="weight" type="number" min="0" step="1" placeholder="Weight">
+                        <input class="form-input exercise-input" id="reps" type="number" min="1" step="1" placeholder="Reps">
+                    </form>
+                    <div class="log-buttons">
+                        <button id="Add-set-btn" class="add-set-btn" type="button">Add set</button>
+                        <button id="save-btn" class="add-set-btn" type="button">Save workout</button>
+                    </div>
+                </footer>     
+            
+
+            </section>
+        </div>
+        
+
+
+       	  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	 https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+
+    <script src="authentication.js"></script>
+    <script src="log.js"></script>
+    <script src="log_functionality.js"></script>
+    <script src="animations.js"></script>    
+</body>
+</html>

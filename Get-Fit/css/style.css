@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    outline: none;
+}
+
+.main-header{
+    background-color: rgba(119, 111, 111, 0.5);
+    width: 100%;
+    height: 10vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    border-bottom: 1px solid rgb(36, 36, 36);
+    
+}
+.logo{
+   height:9vh;
+}
+.menu-toggle{
+    display: none;
+}
+
+.header-ul{
+    width: 170%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.header-ul li a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.dropdown-ul{
+    padding: 0 10px;
+    position: absolute;
+    top: 10vh;
+    width: 15%;
+    max-width: 170px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(119, 111, 111, 0.5);
+    box-shadow: 0 2px 5px rgb(66, 66, 66);
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    transform: translateY(0px);
+    z-index: 1;
+}
+.header-ul li a, .dropdown-icons{
+    color :white;
+    font-size: 1.5rem;
+}
+.dropdown-ul li{
+    width: 100%;
+}
+.header-ul li a:hover, .dropdown-icons:hover{
+    color:black;
+}
+.dropdown-ul  li a{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.dropdown-ul li:hover {
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+.dropdown-ul{
+    list-style: none;
+}
+.dropdown-icons{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.header-ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media screen and (max-width: 1024px){
+    .menu-toggle{
+        display: inline;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .main-header{
+        background-color: white;
+        position: static;
+    }
+    .header-ul{
+        position: absolute;
+        width: 35%;
+        top: 10vh;
+        height: 90vh;
+        right: -100%;
+        background: #333;
+        transition: .5s;
+        display: none;
+        justify-content: flex-start; 
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 10px;
+    }
+    
+    .active-nav{
+        right: 0;
+        display: flex;
+        z-index: 1;
+    }
+    .active-nav li{
+        margin-bottom: 2rem;
+    }
+    #caret{
+        display: none;
+    }
+    
+    .dropdown-ul{
+        margin-top:1.5rem;
+        background: none;
+        box-shadow: none;
+        visibility: visible;
+        position: static;
+        opacity: 1;
+        width: 100%;
+    }
+    .header-ul li{
+        width: 100%;
+    }
+    
+   
+}
+
+
+/*
+main-background-img
+*/
+
+.container{ 
+    width: 100%;   
+    position: relative;
+    z-index: -1;
+}
+
+.inner-container{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    
+}
+.inner-container h1,.inner-container ul li,.inner-container p{
+    padding-top: 10px;
+    font-size: 3vw;
+    color: white;
+    text-shadow: 0.2rem 0.2rem 0px rgba(165, 165, 165, 0.2);
+}
+.inner-container ul li, .inner-container p{
+    border-bottom: 1.5px solid rgb(97, 97, 97);
+}
+.inner-container h1{
+    font-size: 4vw;
+}
+.inner-container li{
+    list-style: none;
+}
+
+#background-img{
+    width: 100%;
+}
+
+
+@media (max-width: 1024px){
+    .inner-container{
+        left: 35%;
+    }
+    .inner-container h1,.inner-container ul li,.inner-container p{
+        font-size: 4vw;
+    }
+    .inner-container h1{
+        font-size: 5vw;
+    }
+}
+
+/*
+aside
+*/
+
+.aside{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.aside-container{
+    padding: 1rem;
+    width: 30%;
+    min-width: 300px;
+    
+    align-self: center;
+}
+.aside-inner-container{
+    display: flex;    
+    align-items: center;
+}
+.aside-inner-container i{
+    padding: 1rem 1rem 1rem 0;
+    font-size: 3rem;
+}
+.app-img{
+    width: 70%;
+}
+.download-app{
+    width:100%;
+}
+.aside-info-wrap{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.aside-app-inner-container{
+    display: flex;
+    justify-content: space-around;
+   
+    margin-bottom: 5rem;
+}
+.aside-app-container{
+    width: 40%;
+}
+.aside-app-inner-container p{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.download-app:hover{
+    cursor: pointer;
+}
+.aside-app-inner-container div{
+    display: flex;
+    flex-direction: column;
+}
+@media(max-width: 1024px){
+    .download-app{
+        width:80%;
+    }
+}
+/*
+login form
+*/
+.form-container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg, rgb(78, 78, 78) 0%, rgba(0,0,0,1) 100%);
+    position: relative;
+
+}
+
+.form {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    background-color: rgb(119, 111, 111, 0.35);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin:auto;
+    max-width: 32rem;
+    max-height: 100%;
+    width: 90%;
+    box-shadow: 0 2px 5px black;
+}
+.form-logo{
+    align-self: center;
+    height:10%;
+    width: 40%;
+    margin-bottom: 5%;
+}
+.form-subtitle{
+    font-size: 2rem;
+    margin-bottom: 2%;
+    text-shadow: 0.25rem 0.25rem 0px black;
+}
+.form-actions{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-input{
+    background: none;
+    border: none;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+    font-size: 1.2rem;
+}
+.form-subtitle, .form-paragraph{
+    color: rgb(255, 255, 255);
+}
+
+.form-input:focus{
+    border-bottom: 2px solid black;
+}
+.form-input:hover{
+    background-color: rgb(221, 0, 0);
+}
+.submit-button{
+    background-color: rgb(221, 0, 0);
+    width: 30%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.25rem;
+    color: white;
+}
+.submit-button:hover{
+    color: black;
+}
+.form-paragraph{
+    margin-bottom: 7%;
+}
+.link, .home-link{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white
+}
+.link:hover, .home-link:hover{
+    color: black;
+}
+.link{
+    margin-top: 10%;
+}
+.form-actions-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*
+workout log
+*/
+.workout-log-body{
+    background: linear-gradient(0deg, rgb(78, 78, 78) 0%, rgba(0,0,0,1) 100%);
+    overflow: hidden;
+}
+.workout-log-header{
+    position: static;
+}
+.workout-log-wrapper{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+.workout-log-section{
+    background-color: rgb(119, 111, 111, 0.35);
+    height: 90%;
+    width: 42rem;
+    max-width: 100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    max-height: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.log-header{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1.3px solid white;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.workout-log-btn, .add-set-btn{
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    color:white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.workout-log-btn:hover{
+    background-color: rgb(221, 0, 0);
+    border:1px solid white;
+}
+
+.workout-log-exercises::-webkit-scrollbar, .workout-log-history::-webkit-scrollbar {
+    width: 1.5rem;
+}
+  
+.workout-log-exercises::-webkit-scrollbar-track, .workout-log-history::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgb(119, 111, 111);; 
+    border-radius: 1rem;
+}
+
+.workout-log-exercises::-webkit-scrollbar-thumb, .workout-log-history::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+}
+  
+.workout-log-exercises::-webkit-scrollbar-thumb:hover, .workout-log-history::-webkit-scrollbar-thumb:hover {
+    background: rgb(221, 0, 0); 
+    border: 1px solid white;
+}
+
+.workout-log-exercises, .workout-log-history{
+    overflow: auto;
+}
+
+.workout-log-exercises, .workout-log-history{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.workout-log-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1.3px solid white;
+    padding: 0.5rem;
+    
+}
+
+.add-set-btn{
+    background-color: rgb(221, 0, 0);
+    width: 30%;
+    
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.25rem;
+    color: white;
+}
+.add-set-btn:hover{
+    color:black;
+}
+.exercise-input{
+    height:2rem;
+    width:30%
+}
+
+.workout-log-form{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.workout-log-history{
+    display: none;
+}
+
+.added-exercise, .history-exercises{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    color:white;
+    border-bottom: 1px solid rgb(221, 0, 0);
+    padding: 0.5rem;
+    font-size: 1.3rem;
+}
+.added-exercise p, .history-exercises p{
+    padding-right: 2rem;
+}
+.log-buttons{
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+}
+.workout-date{
+    margin-top: 1rem;
+    background-color: rgb(221, 0, 0);
+    color: white;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    box-shadow: 0 2px 5px black;
+}
+.active-btn{    
+    background-color: rgb(221, 0, 0);
+    border:1px solid white; ;
+}
